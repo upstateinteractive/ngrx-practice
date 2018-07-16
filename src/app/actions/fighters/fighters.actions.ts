@@ -11,7 +11,7 @@ export class Get implements Action {
 }
 
 
-export type ArticleActions
+export type FightersActions
 =
 // export action
 | Get;
