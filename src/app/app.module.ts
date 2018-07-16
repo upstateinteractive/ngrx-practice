@@ -10,6 +10,16 @@ import { StoreModule, ActionsSubject } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { FightersEffects } from './effects/fighters/fighters.effects';
+
+// services
+import { ApiService } from './services/api.service';
+import {
+  CMSActions,
+  CMSActionsSubject,
+} from './services/dispatcher.service';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +31,13 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([FightersEffects, ])
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    { provide: ActionsSubject, useClass: CMSActionsSubject },
+    CMSActions,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
