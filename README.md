@@ -15,7 +15,7 @@ npm start
 ## Practice One
 ### Objectives
 1. Actions
-- [ ] create the actions necessary to initiate a GET requeset, respond to a completed GET request, and respond to an errored GET request (total: 3 actions)
+- [ ] create the actions necessary to initiate a GET request, respond to a completed GET request, and respond to an errored GET request (total: 3 actions)
 - [ ] create the action necessary to select a fighter (total: 1 action)
 - [ ] create the necessary effect to map the response of the GET action to the GET_COMPLETE and GET_ERROR actions appropriately (total: 1 effect)
 
