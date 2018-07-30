@@ -19,13 +19,13 @@ npm start
 - [ ] create the action necessary to select a fighter (total: 1 action)
 - [ ] create the necessary effect to map the response of the GET action to the GET_COMPLETE and GET_ERROR actions appropriately (total: 1 effect)
 
-2. Reducers
+2. Store
+- [ ] dispatch a GET action in ngOnInit
+- [ ] dispatch a select action when selecting a fighter
+
+3. Reducers
 - [ ] create a case to add all of the response items to state on a successful GET request using ngrx/Entity
 - [ ] create a case to add the selectedId of a single item to state
-
-3. Store
-- [ ] dispatch a select action when selecting a fighter
-- [ ] dispatch a GET action in ngOnInit
 
 4. State
 - [ ] create selectors for selecting 1 fighter from the state and all of the fighters from the state
