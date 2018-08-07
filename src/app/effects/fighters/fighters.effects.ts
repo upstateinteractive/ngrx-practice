@@ -24,4 +24,4 @@ export class FightersEffects {
   // @Effect()
    // add effect code here
 
-} // end Article Effects
+} // end Fighters Effects
